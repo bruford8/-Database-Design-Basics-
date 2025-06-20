@@ -1,0 +1,20 @@
+1.INSERT INTO Products (name, category_id, price, quantity_in_stock, expiration_date)
+VALUES ('Молоко 3.2%', 1, 89.99, 50, 20.02.2007);
+2.DELETE FROM Products
+WHERE name = 'Молоко 3.2%';
+3.UPDATE Products
+SET price = 95.50
+WHERE name = 'Молоко 3.2%';
+4.SELECT *
+FROM Products
+WHERE name LIKE '%Молоко%';
+5.SELECT *
+FROM Products
+WHERE price BETWEEN 50 AND 100;
+6.SELECT Products.product_name, Categories.category_name
+FROM Products
+JOIN Categories ON Products.category_id = Categories.category_id;
+7.SELECT * FROM Employees
+WHERE employee_id IN (
+    SELECT employee_id FROM Sales
+);
